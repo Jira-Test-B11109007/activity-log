@@ -30,8 +30,8 @@ jobs:
         run: |
           git config --global user.name 'timo9378'
           git config --global user.email '132542914+timo9378@users.noreply.github.com'
-          git commit -am "dist build" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.ACTION_SECERT_2024 }}@github.com/Jira-Test-B11109007/activity-log.git
+          git commit -am "dist build"
+          git push
 
   test:
     runs-on: ubuntu-latest
@@ -65,12 +65,12 @@ jobs:
           git pull
       - name: Tag it
         run: |
-          git tag -a ${{ inputs.tag }} -m "${{ inputs.note }}"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Jira-Test-B11109007/activity-log.git --tags
+          git tag -a ${{ inputs.tag }} -m "${{ inputs.note }}" master
+          git push --tags
       - name: Release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTION_SECERT_2024 }}
+          GITHUB_TOKEN: ${{ secrets.github_token }}
         with:
           tag_name: ${{ inputs.tag }}
           release_name: Release ${{ inputs.tag }}
