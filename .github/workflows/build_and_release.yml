@@ -31,7 +31,7 @@ jobs:
           git config --global user.name 'timo9378'
           git config --global user.email '132542914+timo9378@users.noreply.github.com'
           git commit -am "dist build" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Jira-Test-B11109007/activity-log.git
+          git push https://x-access-token:${{ secrets.ACTION_SECERT_2024 }}@github.com/Jira-Test-B11109007/activity-log.git
 
   test:
     runs-on: ubuntu-latest
