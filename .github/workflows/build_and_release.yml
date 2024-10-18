@@ -45,7 +45,7 @@ jobs:
         env:
           INPUT_GITHUB_USERNAME: "timo9378"
           INPUT_GITHUB_TOKEN: ${{ secrets.ACTION_SECERT_2024 }}
-          INPUT_TARGET_REPOS: '[timo9378/activity-log]'
+          INPUT_TARGET_REPOS: '[Jira-Test-B11109007/activity-log]'
           INPUT_OUTPUT_STYLE: MARKDOWN
           INPUT_IGNORE_EVENTS: '[]'
           INPUT_README_PATH: README.md
