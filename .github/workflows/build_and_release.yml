@@ -28,8 +28,8 @@ jobs:
           npm run build
       - name: Commit
         run: |
-          git config --global user.name 'raymundlin'
-          git config --global user.email '142639231+raymundlin@users.noreply.github.com'
+          git config --global user.name 'timo9378'
+          git config --global user.email 'timo9378@gmail.com'
           git commit -am "dist build"
           git push
 
@@ -43,9 +43,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test index.js
         env:
-          INPUT_GITHUB_USERNAME: "raymundlin"
-          INPUT_GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }}
-          INPUT_TARGET_REPOS: '[raymundlin/activity-log]'
+          INPUT_GITHUB_USERNAME: "timo9378"
+          INPUT_GITHUB_TOKEN: ${{ secrets.SECURE2024_B11109007 }}
+          INPUT_TARGET_REPOS: '[timo9378/activity-log]'
           INPUT_OUTPUT_STYLE: MARKDOWN
           INPUT_IGNORE_EVENTS: '[]'
           INPUT_README_PATH: README.md
@@ -60,8 +60,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Pull latest
         run: |
-          git config --global user.name 'raymundlin'
-          git config --global user.email '142639231+raymundlin@users.noreply.github.com'
+          git config --global user.name 'timo9378'
+          git config --global user.email 'timo9378@gmail.com'
           git pull
       - name: Tag it
         run: |
