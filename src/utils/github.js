@@ -113,13 +113,13 @@ async function fetchAndFilterEvents() {
                 return event;
             })
             .slice(0, eventLimit);
-//預更改位置
-        if (filteredEvents.length < eventLimit) {
-            const additionalEvents = await fetchAllEvents();
-            allEvents = additionalEvents.concat(allEvents);
-        } else {
-            break;
-        }
+        break;
+//        if (filteredEvents.length < eventLimit) {
+//            const additionalEvents = await fetchAllEvents();
+//            allEvents = additionalEvents.concat(allEvents);
+//        } else {
+//            break;
+//        }
     }
 
     filteredEvents = filteredEvents.slice(0, eventLimit);
