@@ -36,7 +36,7 @@ async function fetchAllStarredRepos() {
     return { starredRepoNames };
 }
 
-// Function to check if the event was likely triggered by GitHub Actions or bots
+// Function to check if the event was likely triggered by GitHub Actions or botsIJIUHIH
 function isTriggeredByGitHubActions(event) {
     // Regex patterns to match common GitHub Actions or bot commit messages
     const botPatterns = /(\[bot\]|GitHub Actions|github-actions)/i;
